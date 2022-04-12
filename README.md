@@ -39,11 +39,16 @@ sighan15 | train:3174 test:1100 | http://nlp.ee.ncu.edu.tw/resource/csc.html
 
 
 
-已经训练好的模型：
+- 已经训练好的模型：
 
-sighan13链接：
+wang2018数据训练
+链接：
 
-sighan15链接：
+sighan13微调
+链接：
+
+sighan15微调
+链接：
 
 
 - 指标：
