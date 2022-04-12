@@ -19,11 +19,13 @@ sighan15 | train:3174 test:1100 | http://nlp.ee.ncu.edu.tw/resource/csc.html
 ## 香侬科技ChineseBert用于中文拼写纠错
 
 - 训练：
+ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 
-1. 拷贝ChineseBert代码https://github.com/ShannonAI/ChineseBert，
-置于ChineseBert文件夹，并安装ChineseBert所需依赖
+1. 下载ChineseBert放出的预训练模型
 
-2. 下载训练数据，置于data文件夹，运行train.sh
+2. 拷贝ChineseBert代码，置于ChineseBert文件夹，并安装ChineseBert所需依赖
+
+3. 下载训练数据，置于data文件夹，运行train.sh
 
 注意：先用wang2018数据预训练，再用同分布的sighan13微调
 
