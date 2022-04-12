@@ -7,8 +7,8 @@ ChineseBert用于中文拼写纠错
 ---|---|---
 wang2018 | 271329 | https://github.com/wdimmy/Automatic-Corpus-Generation
 sighan13 | train:350 test:1000| http://nlp.ee.ncu.edu.tw/resource/csc.html
-sighan14 1 | train:6526 test:1062 | http://nlp.ee.ncu.edu.tw/resource/csc.html
-sighan15 1 | train:3174 test:1100 | http://nlp.ee.ncu.edu.tw/resource/csc.html
+sighan14 | train:6526 test:1062 | http://nlp.ee.ncu.edu.tw/resource/csc.html
+sighan15 | train:3174 test:1100 | http://nlp.ee.ncu.edu.tw/resource/csc.html
 
 
 
