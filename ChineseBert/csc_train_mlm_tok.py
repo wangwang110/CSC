@@ -7,14 +7,14 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.optim import Adam
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Dataset
 from getF1 import sent_mertic, token_mertic
 from BertFineTune import BertFineTuneMac
 from dataset import construct, BertDataset
 from bert_dataset_tok import BertMaskDataset
 from models.modeling_glycebert import GlyceBertForMaskedLM
 
-chinese_bert_path = "/home/plm_model/ChineseBERT-base/"
+chinese_bert_path = "/home/plm_models/ChineseBERT-base/"
 vob = set()
 with open(chinese_bert_path + "vocab.txt", "r", encoding="utf-8") as f:
     for line in f.readlines():
@@ -151,17 +151,20 @@ class Trainer:
             num = len(batch["input"])
             for i in range(num):
                 src = batch["input"][i]
+                trg = batch["output"][i]
                 tokens = list(src)
                 # print(trg)
                 for j in range(len(tokens) + 1):
-                    if out[i][j + 1] != input_ids[i][j + 1] and out[i][j + 1] not in [100, 101, 102, 0]:
+                    if out[i][j + 1] != input_ids[i][j + 1] and out[i][j + 1] not in [100, 101, 102, 0] \
+                            and self.vob[out[i][j + 1].item()] != "著":
                         val = out[i][j + 1].item()
                         if j < len(tokens):
                             tokens[j] = self.vob[val]
                 out_sent = "".join(tokens)
-                if out_sent != src:
+                if out_sent != src and out_sent != trg:
                     print(src)
                     print(out_sent)
+                    print(trg)
                     print("=======================")
                 all_pres.append(out_sent)
 
@@ -282,7 +285,7 @@ class Trainer:
         pinyin_tokens = [[0] * 8]  # CLS
         pinyin_id = self.tokenizer.convert_sentence_to_pinyin_ids(src)
         pinyin_tokens.extend(pinyin_id)
-        pinyin_tokens.append([0] * 8) # SEP
+        pinyin_tokens.append([0] * 8)  # SEP
 
         tokens_a = [a for a in src]
         tokens = []

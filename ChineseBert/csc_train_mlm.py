@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 
 import os
-import pickle
 import argparse
 import operator
 import numpy as np
@@ -15,7 +14,7 @@ from dataset import construct, BertDataset
 from datasets.bert_mask_dataset import BertMaskDataset
 from models.modeling_glycebert import GlyceBertForMaskedLM
 
-chinese_bert_path = "/home/plm_model/ChineseBERT-base/"
+chinese_bert_path = "/home/plm_models/ChineseBERT-base/"
 vob = set()
 with open(chinese_bert_path + "vocab.txt", "r", encoding="utf-8") as f:
     for line in f.readlines():
@@ -152,17 +151,20 @@ class Trainer:
             num = len(batch["input"])
             for i in range(num):
                 src = batch["input"][i]
+                trg = batch["output"][i]
                 tokens = list(src)
                 # print(trg)
                 for j in range(len(tokens) + 1):
-                    if out[i][j + 1] != input_ids[i][j + 1] and out[i][j + 1] not in [100, 101, 102, 0]:
+                    if out[i][j + 1] != input_ids[i][j + 1] and out[i][j + 1] not in [100, 101, 102, 0] \
+                            and self.vob[out[i][j + 1].item()] != "著":
                         val = out[i][j + 1].item()
                         if j < len(tokens):
                             tokens[j] = self.vob[val]
                 out_sent = "".join(tokens)
-                if out_sent != src:
+                if out_sent != src and out_sent != trg:
                     print(src)
                     print(out_sent)
+                    print(trg)
                     print("=======================")
                 all_pres.append(out_sent)
 

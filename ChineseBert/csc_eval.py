@@ -7,13 +7,13 @@ import numpy as np
 from torch.utils.data import DataLoader
 from dataset import construct, BertDataset, li_testconstruct
 from BertFineTune import BertFineTuneMac
-# from datasets.bert_dataset_tok import BertMaskDataset
-from datasets.bert_mask_dataset import BertMaskDataset
+from datasets.bert_dataset_tok import BertMaskDataset
+# from datasets.bert_mask_dataset import BertMaskDataset
 from models.modeling_glycebert import GlyceBertForMaskedLM
 
 
 class CSCmodel:
-    def __init__(self, chinese_bert_path, model_path, gpu_id="6"):
+    def __init__(self, chinese_bert_path, model_path, gpu_id="1"):
         """
         :param bert_path:
         :param model_path:
@@ -33,11 +33,14 @@ class CSCmodel:
 
         self.batch_size = 20
 
-        # bert的词典
+        # chinese bert的词典
         self.vob = {}
-        with open("/data_local/plm_models/chinese_L-12_H-768_A-12/vocab.txt", "r", encoding="utf-8") as f:
+        self.w2id = {}
+        with open(chinese_bert_path + "vocab.txt", "r", encoding="utf-8") as f:
             for i, line in enumerate(f):
-                self.vob.setdefault(i, line.strip())
+                if line.strip() != "":
+                    self.vob.setdefault(i, line.strip())
+                    self.w2id.setdefault(line.strip(), i)
 
     def test_without_trg(self, all_texts):
         self.model.eval()
@@ -118,8 +121,8 @@ class CSCmodel:
 
 if __name__ == "__main__":
     # 初始化模型
-    chinese_bert_path = "/data_local/plm_models/ChineseBERT-base/"
-    load_path = "/data_local/ChineseBert/save/wang2018/sighan13/model.pkl"
+    chinese_bert_path = "/home/plm_models/ChineseBERT-base/"
+    load_path = "./save/wang2018/sighan13/model.pkl"
     obj = CSCmodel(chinese_bert_path, load_path)
     input_text, model_ouput = obj.test_without_trg([
         "布告栏转眼之间从不起眼的丑小鸭变成了高贵优雅的天鹅！仅管这大改造没有得名，但过程也是很可贵的。",
