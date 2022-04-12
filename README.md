@@ -16,7 +16,7 @@ sighan15 1 | train:3174 test:1100 | http://nlp.ee.ncu.edu.tw/resource/csc.html
 
 
 
-. 香侬科技ChineseBert用于中文拼写纠错
+## 香侬科技ChineseBert用于中文拼写纠错
 
 https://github.com/ShannonAI/ChineseBert
 
