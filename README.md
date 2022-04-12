@@ -18,11 +18,29 @@ sighan15 1 | train:3174 test:1100 | http://nlp.ee.ncu.edu.tw/resource/csc.html
 
 ## 香侬科技ChineseBert用于中文拼写纠错
 
-https://github.com/ShannonAI/ChineseBert
+训练：
+
+1. 拷贝ChineseBert代码https://github.com/ShannonAI/ChineseBert，
+置于ChineseBert文件夹，并安装ChineseBert所需依赖
+
+2. 下载训练数据，置于data文件夹，运行run.sh
+
+
+测试：
+
+运行csc_eval.py 即可
+
+
+已经训练好的模型：
+
+
+指标：
+
+数据集 | correct F1
+---|---
+sighan13 | 82.3
+sighan15 | 75
 
 
 
-训练好的模型：
-
-结果测试，运行csc_eval.py 即可
 
