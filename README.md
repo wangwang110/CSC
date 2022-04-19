@@ -91,6 +91,9 @@ sighan15结果:
  ECOPO REALISE (BERT-wwm) |77.5 82.6 80.0| 76.1 81.2 78.5| [论文](https://arxiv.org/pdf/2203.00991.pdf)
  
  
+ 此外，还有一篇通过数据增强的方法来处理csc任务的[Exploration and Exploitation: Two Ways to Improve Chinese Spelling Correction Model](https://arxiv.org/pdf/2105.14813.pdf），只不过该论文是在不同的训练集上训练，得到不同数据集对应的模型
+ 
+ 例如，在sighan15训练的模型，用于sighan15测试集的测试，所以结果会相对偏高
  
 ## 香侬科技ChineseBert用于中文拼写纠错
 
