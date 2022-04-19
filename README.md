@@ -20,12 +20,14 @@ sighan13，sighan14，sighan15 包含对应的训练集和测试集，Wang271K�
 
 
 ## 评价指标
-相比官方放出的评价指标，该指标更为严格（所有修正过的句子都算作P值的分母）
-(代码)[]
+(代码)[https://github.com/wangwang110/ChineseBert_CSC/blob/main/ChineseBert/getF1.py]
+
+相比官方放出的评价指标，该指标更为严格（所有修正过的句子都算作P值的分母），论文大都使用该评价指标
+
 
 ## 榜单
 
-各论文指标（不同的论文使用bert取得的结果不一样, 有的使用google bert，有的使用roberta，有的使用chinese_wmm bert）
+各论文指标（不同的论文使用bert取得的结果不一样）
 
 sighan13结果:
 
