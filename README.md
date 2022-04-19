@@ -38,14 +38,10 @@ sighan13结果:
  MLM-phonetics | 82.0 78.3 80.1| 79.5 77.0 78.2 | [论文](https://aclanthology.org/2021.findings-acl.198.pdf)
  BERT  |98.7 70.6 82.3|98.6 67.8 80.4| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
  PHMOSpell |99.5 76.8 86.7| 99.5 75.1 85.6 | [论文](https://aclanthology.org/2021.acl-long.464.pdf)
- 
- BERT (Xu et al., 2021) | 85.0 77.0 80.8 | 83.0 75.2 78.9 | 论文
- ECOPO BERT(Li et al.,2022)|87.2 81.7 84.4| 86.1 80.6 83.3 | 论文
- REALISE (Xu et al., 2021) | 88.6 82.5 85.4 | 87.2 81.2 84.1 | 论文
- BERT (Huang et al., 2021) | 98.7 70.6 82.3 | 67.8 98.6 67.8 80.4 | 论文
- PHMOSpell (Huang et al., 2021) | 99.5 76.8 86.7 | 99.5 75.1 85.6 | 论文
- ECOPO REALISE Li et al.,2022) |89.3 83.2 86.2| 88.5 82.0 85.1 | 论文
-
+ BERT | 85.0 77.0 80.8| 83.0 75.2 78.9 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ REALISE | 88.6 82.5 85.4 | 87.2 81.2 84.1 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ ECOPO BERT |87.2 81.7 84.4 | 86.1 80.6 83.3|  [论文](https://arxiv.org/pdf/2203.00991.pdf) 
+ ECOPO REALISE |89.3 83.2 86.2 | 88.5 82.0 85.1| [论文](https://arxiv.org/pdf/2203.00991.pdf)
 
 sighan14结果:
 
@@ -59,12 +55,13 @@ sighan14结果:
  MLM-phonetics | 66.2 73.8 69.8| 64.2 73.8 68.7 | [论文](https://aclanthology.org/2021.findings-acl.198.pdf)
  BERT  |78.6 60.7 68.5|77.8 57.6 66.2| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
  PHMOSpell |85.3 67.6 75.5| 84.7 64.3 73.1 |[论文](https://aclanthology.org/2021.acl-long.464.pdf)
- BERT (Xu et al., 2021) | 85.0 77.0 80.8 | 83.0 75.2 78.9 | 论文
- ECOPO BERT(Li et al.,2022)|87.2 81.7 84.4| 86.1 80.6 83.3 | 论文
- REALISE (Xu et al., 2021) | 88.6 82.5 85.4 | 87.2 81.2 84.1 | 论文
- BERT (Huang et al., 2021) | 98.7 70.6 82.3 | 67.8 98.6 67.8 80.4 | 论文
- PHMOSpell (Huang et al., 2021) | 99.5 76.8 86.7 | 99.5 75.1 85.6 | 论文
- ECOPO REALISE Li et al.,2022) |89.3 83.2 86.2| 88.5 82.0 85.1 | 论文
+ BERT(4 layer) |82.6 59.0 68.8| 82.4 58.0 68.1| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
+ SpellBERT (4 layer) |83.1 62.0 71.0| 82.9 61.2 70.4| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
+ BERT | 64.5 68.6 66.5| 62.4 66.3 64.3| [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ REALISE | 67.8 71.5 69.6 | 66.3 70.0 68.1 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ ECOPO BERT |65.8 69.0 67.4 | 63.7 66.9 65.3|  [论文](https://arxiv.org/pdf/2203.00991.pdf) 
+ ECOPO REALISE |68.8 72.1 70.4 | 67.5 71.0 69.2| [论文](https://arxiv.org/pdf/2203.00991.pdf)
+
 
 
 sighan15结果:
@@ -81,15 +78,14 @@ sighan15结果:
  MLM-phonetics | 77.5 83.1 80.2| 74.9 80.2 77.5 |[论文](https://aclanthology.org/2021.findings-acl.198.pdf)
  BERT  |68.4 77.6 72.7 | 66.0 74.9 70.2| [论文](https://aclanthology.org/2021.acl-long.233.pdf)
  PLOME | 77.4 81.5 79.4 | 75.3 79.3 77.2 | [论文](https://aclanthology.org/2021.acl-long.233.pdf)
- BERT  |79.9 84.1 72.9 78.1|77.5 83.1 68.0 74.8| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
+ BERT  |79.9 84.1 72.9 78.1|83.1 68.0 74.8| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
  PHMOSpell |90.1 72.7 80.5| 89.6 69.2 78.1| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
- 
- BERT (Xu et al., 2021) | 85.0 77.0 80.8 | 83.0 75.2 78.9 | 论文
- ECOPO BERT(Li et al.,2022)|87.2 81.7 84.4| 86.1 80.6 83.3 | 论文 
- REALISE (Xu et al., 2021) | 88.6 82.5 85.4 | 87.2 81.2 84.1 | 论文
- BERT (Huang et al., 2021) | 98.7 70.6 82.3 | 67.8 98.6 67.8 80.4 | 论文
- PHMOSpell (Huang et al., 2021) | 99.5 76.8 86.7 | 99.5 75.1 85.6 | 论文
- ECOPO REALISE Li et al.,2022) |89.3 83.2 86.2| 88.5 82.0 85.1 | 论文
+ BERT(4 layer) |85.2 68.9 76.2| 84.8 66.9 74.8| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
+ SpellBERT (4 layer) |87.5 73.6 80.0| 87.1 71.5 78.5| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
+ BERT (Xu et al., 2021) | 74.2 78.0 76.1 | 71.6 75.3 73.4 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ REALISE (Xu et al., 2021) | 77.3 81.3 79.3 | 75.9 79.9 77.8 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ ECOPO BERT(Li et al.,2022)|78.2 82.3 80.2| 76.6 80.4 78.4 |  [论文](https://arxiv.org/pdf/2203.00991.pdf) 
+ ECOPO REALISE |77.5 82.6 80.0| 76.1 81.2 78.5| [论文](https://arxiv.org/pdf/2203.00991.pdf)
  
  
  
