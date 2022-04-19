@@ -46,7 +46,7 @@ sighan14结果:
  模型 | Detection Level | Correction Level
 ---|---|---
  Hybrid (Wang et al., 2018) | 51.9 66.2 58.2 | _ _ 56.1
- FASpell (Hong et al., 2019)|76.2 63.2 69.1| 73.1 60.5 66.2
+ FASpell (Hong et al., 2019)|61.0 53.5 57.0| 59.4 52.0 55.4
  SpellGCN (Cheng et al., 2020) | 80.1 74.4 77.2 | 78.3 72.7 75.4
  BERT (Xu et al., 2021) | 85.0 77.0 80.8 | 83.0 75.2 78.9
  ECOPO BERT(Li et al.,2022)|87.2 81.7 84.4| 86.1 80.6 83.3
@@ -61,8 +61,8 @@ sighan15结果:
  模型 | Detection Level | Correction Level
 ---|---|---
  Hybrid (Wang et al., 2018) | 56.6 69.4 62.3 |  _ _ 57.1
- FASpell (Hong et al., 2019)|76.2 63.2 69.1| 73.1 60.5 66.2
- SpellGCN (Cheng et al., 2020) | 80.1 74.4 77.2 | 78.3 72.7 75.4
+ FASpell (Hong et al., 2019) | 67.6 60.0 63.5 | 66.6 59.1 62.6
+ SpellGCN (Cheng et al., 2020) | 80.1 74.4 77.2 | 66.6 59.1 62.6
  BERT (Xu et al., 2021) | 85.0 77.0 80.8 | 83.0 75.2 78.9
  ECOPO BERT(Li et al.,2022)|87.2 81.7 84.4| 86.1 80.6 83.3
  REALISE (Xu et al., 2021) | 88.6 82.5 85.4 | 87.2 81.2 84.1
