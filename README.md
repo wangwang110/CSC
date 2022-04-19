@@ -16,15 +16,16 @@ sighan13，sighan14，sighan15 包含对应的训练集和测试集，Wang271K�
 
 如何处理，可参考：https://github.com/DaDaMrX/ReaLiSe
 
-处理过的数据链接: https://pan.baidu.com/s/1Lr_L-lbesYW4fjhELtZ3-w?pwd=4863 提取码: 4863 
+处理过的数据链接: https://pan.baidu.com/s/1Lr_L-lbesYW4fjhELtZ3-w?pwd=4863 
 
 
 ## 评价指标
 相比官方放出的评价指标，该指标更为严格（所有修正过的句子都算作P值的分母）
+(代码)[]
 
 ## 榜单
 
-各论文指标（不同的论文使用bert取得的结果不一样）
+各论文指标（不同的论文使用bert取得的结果不一样, 有的使用google bert，有的使用roberta，有的使用chinese_wmm bert）
 
 sighan13结果:
 
