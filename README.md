@@ -30,7 +30,7 @@ sighan13结果:
 
  模型 | Detection Level | Correction Level | 来源
 ---|---|--- |---
- Hybrid (Wang et al., 2018) | 54.0 69.3 60.7 |  _ _ 52.1 | 论文 [https://aclanthology.org/D18-1273.pdf]
+ Hybrid (Wang et al., 2018) | 54.0 69.3 60.7 |  _ _ 52.1 | 论文[https://aclanthology.org/D18-1273.pdf]
  FASpell (Hong et al., 2019)|76.2 63.2 69.1| 73.1 60.5 66.2 | 论文
  BERT (Cheng et al., 2020) | 79.0 72.8 75.8 | 77.7 71.6 74.6 | 论文
  SpellGCN (Cheng et al., 2020) | 80.1 74.4 77.2 | 78.3 72.7 75.4 | 论文
