@@ -70,8 +70,8 @@ sighan15结果:
 ---|---|---|---
  Hybrid | 56.6 69.4 62.3 |  _ _ 57.1  | [论文](https://aclanthology.org/D18-1273.pdf)
  FASpell | 67.6 60.0 63.5 | 66.6 59.1 62.6 | [论文](https://aclanthology.org/D19-5522.pdf)
- BERT (Zhang, et al., 2020) | 73.0 70.8 71.9 | 65.9 64.0 64.9 | [论文](https://arxiv.org/pdf/2005.07421.pdf)
- Soft-Masked BERT Zhang, et al., 2020) | 73.7 73.2 73.5 | 66.7 66.2 66.4 | [论文](https://arxiv.org/pdf/2005.07421.pdf)
+ BERT | 73.0 70.8 71.9 | 65.9 64.0 64.9 | [论文](https://arxiv.org/pdf/2005.07421.pdf)
+ Soft-Masked BERT | 73.7 73.2 73.5 | 66.7 66.2 66.4 | [论文](https://arxiv.org/pdf/2005.07421.pdf)
  BERT | 73.7 78.2 75.9 | 70.9 75.2 73.0 | [论文](https://arxiv.org/pdf/2004.14166.pdf)
  SpellGCN | 74.8 80.7 77.7 | 72.1 77.7 75.9 | [论文](https://arxiv.org/pdf/2004.14166.pdf)
  ERNIE  |73.6 79.8 76.6 | 68.6 74.4 71.4| [论文](https://aclanthology.org/2021.findings-acl.198.pdf)
