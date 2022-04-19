@@ -85,9 +85,9 @@ sighan15结果:
  PHMOSpell |90.1 72.7 80.5| 89.6 69.2 78.1| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
  BERT(4 layer) |85.2 68.9 76.2| 84.8 66.9 74.8| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
  SpellBERT (4 layer) |87.5 73.6 80.0| 87.1 71.5 78.5| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
- BERT (Xu et al., 2021) | 74.2 78.0 76.1 | 71.6 75.3 73.4 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
- REALISE (Xu et al., 2021) | 77.3 81.3 79.3 | 75.9 79.9 77.8 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
- ECOPO BERT(Li et al.,2022)|78.2 82.3 80.2| 76.6 80.4 78.4 |  [论文](https://arxiv.org/pdf/2203.00991.pdf) 
+ BERT  | 74.2 78.0 76.1 | 71.6 75.3 73.4 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ REALISE  | 77.3 81.3 79.3 | 75.9 79.9 77.8 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
+ ECOPO BERT |78.2 82.3 80.2| 76.6 80.4 78.4 |  [论文](https://arxiv.org/pdf/2203.00991.pdf) 
  ECOPO REALISE |77.5 82.6 80.0| 76.1 81.2 78.5| [论文](https://arxiv.org/pdf/2203.00991.pdf)
  
  
