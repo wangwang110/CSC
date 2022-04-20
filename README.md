@@ -99,16 +99,17 @@ sighan15结果:
  
 ## 香侬科技ChineseBert用于中文拼写纠错
 
-- 训练：
 ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 
-1. 下载ChineseBert放出的预训练模型
+![image](https://user-images.githubusercontent.com/21475557/164133645-e560f580-4c54-4f38-9bca-153f6bf0fd32.png)
+
+- 训练：
+
+1. 下载ChineseBert放出的预训练模型，放置在本地文件夹（chinese_bert_path 参数）
 
 2. 拷贝ChineseBert代码，置于ChineseBert文件夹，并安装ChineseBert所需依赖
 
 3. 下载训练数据，置于data文件夹，运行train.sh
-
-注意：先用wang2018数据预训练，再用同分布的sighan13微调
 
 
 - 测试：
@@ -118,29 +119,42 @@ ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 
 - 纠正文本：
 
-运行csc_eval.py 即可
+填入模型路径，运行csc_eval.py 即可
 
+运行结果:
+
+```
+布告栏转眼之间从不起眼的丑小鸭变成了高贵优雅的天鹅！仅管这大改造没有得名，但过程也是很可贵的。
+布告栏转眼之间从不起眼的丑小鸭变成了高贵优雅的天鹅！尽管这大改造没有得名，但过程也是很可贵的。
+仅->尽
+我爱北进天安门
+我爱北进天安门
+我爱北京天按门
+我爱北京天安门
+按->安
+没过几分钟，救护车来了，发出响亮而清翠的声音
+没过几分钟，救护车来了，发出响亮而清翠的声音
+我见过一望无际、波澜壮阔的大海；玩赏过水平如镜、诗情画意的西湖；游览过翡翠般的漓江；让我难以忘怀的要数那荷叶飘香、群山坏绕的普者黑。
+我见过一望无际、波澜壮阔的大海；玩赏过水平如镜、诗情画意的西湖；游览过翡翠般的漓江；让我难以忘怀的要数那荷叶飘香、群山环绕的普者黑。
+坏->环
+```
 
 
 - 已经训练好的模型：
 
-wang2018数据训练
-链接：
-
-sighan13微调
-链接：
-
-sighan15微调
-链接：
 
 
 - 指标：
 
-数据集 | correct F1
----|---
-sighan13 | 82.3
-sighan15 | 75
+数据集 | Detection Level | Correction Level |
+---|---|---
+sighan13 | p:0.84,r:0.792,F1:0.815 | p:0.823,recall:0.775,F1:0.799 
+new_data | p:0.491,r:0.398,F1:0.44 | p:0.442,recall:0.358,F1:0.396
 
+
+- 注意
+1. 先用wang2018数据预训练，再用同分布的sighan13微调
+2. 使用词表的分词方式容易造成拼音和数字错误修正，因此直接使用一个字作为token，不使用基于词表的分词（csc_train_mlm_tok.py）
 
 
 
