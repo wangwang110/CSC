@@ -111,8 +111,6 @@ ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 
 3. 下载训练数据，置于data文件夹，运行train.sh
 
-注意：先用wang2018数据预训练，再用同分布的sighan13微调
-
 
 - 测试：
 
@@ -142,8 +140,6 @@ ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 ```
 
 
-
-
 - 已经训练好的模型：
 
 
@@ -155,6 +151,10 @@ ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 sighan13 | p:0.84,r:0.792,F1:0.815 | p:0.823,recall:0.775,F1:0.799 
 new_data | p:0.491,r:0.398,F1:0.44 | p:0.442,recall:0.358,F1:0.396
 
+
+- 注意
+1. 先用wang2018数据预训练，再用同分布的sighan13微调
+2. 使用词表的分词方式容易造成拼音和数字错误修正，因此直接使用一个字作为token，不使用基于词表的分词（csc_train_mlm_tok.py）
 
 
 
