@@ -14,12 +14,6 @@ from dataset import construct, BertDataset
 from bert_dataset_tok import BertMaskDataset
 from models.modeling_glycebert import GlyceBertForMaskedLM
 
-chinese_bert_path = "/home/plm_models/ChineseBERT-base/"
-vob = set()
-with open(chinese_bert_path + "vocab.txt", "r", encoding="utf-8") as f:
-    for line in f.readlines():
-        vob.add(line.strip())
-
 
 def is_chinese(usen):
     """判断一个unicode是否是汉字"""
@@ -42,7 +36,7 @@ class Trainer:
         # chinese bert的词典
         self.vob = {}
         self.w2id = {}
-        with open(chinese_bert_path + "vocab.txt", "r", encoding="utf-8") as f:
+        with open(args.chinese_bert_path + "/vocab.txt", "r", encoding="utf-8") as f:
             for i, line in enumerate(f):
                 if line.strip() != "":
                     self.vob.setdefault(i, line.strip())
@@ -155,17 +149,16 @@ class Trainer:
                 tokens = list(src)
                 # print(trg)
                 for j in range(len(tokens) + 1):
-                    if out[i][j + 1] != input_ids[i][j + 1] and out[i][j + 1] not in [100, 101, 102, 0] \
-                            and self.vob[out[i][j + 1].item()] != "著":
+                    if out[i][j + 1] != input_ids[i][j + 1] and out[i][j + 1] not in [100, 101, 102, 0]:
                         val = out[i][j + 1].item()
                         if j < len(tokens):
                             tokens[j] = self.vob[val]
                 out_sent = "".join(tokens)
-                if out_sent != src and out_sent != trg:
-                    print(src)
-                    print(out_sent)
-                    print(trg)
-                    print("=======================")
+                # if out_sent != src and out_sent != trg:
+                #     print(src)
+                #     print(out_sent)
+                #     print(trg)
+                #     print("=======================")
                 all_pres.append(out_sent)
 
         sent_mertic(all_srcs, all_pres, all_trgs)
@@ -395,7 +388,7 @@ if __name__ == "__main__":
     parser.add_argument('--gpu_num', type=int, default=2)
     parser.add_argument('--load_model', type=str2bool, nargs='?', const=False)
     parser.add_argument('--load_path', type=str, default='./save/13_train_seed0_1.pkl')
-
+    parser.add_argument('--chinese_bert_path', type=str, default='/home/plm_models/ChineseBERT-base/')
     parser.add_argument('--do_train', type=str2bool, nargs='?', const=False)
     parser.add_argument('--train_data', type=str, default='../data/13train.txt')
     parser.add_argument('--do_valid', type=str2bool, nargs='?', const=False)
@@ -430,9 +423,9 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     ###
     # 模型加载
-    chinese_bert = GlyceBertForMaskedLM.from_pretrained(chinese_bert_path, return_dict=True)
-    vocab_file = os.path.join(chinese_bert_path, 'vocab.txt')
-    config_path = os.path.join(chinese_bert_path, 'config')
+    chinese_bert = GlyceBertForMaskedLM.from_pretrained(args.chinese_bert_path, return_dict=True)
+    vocab_file = os.path.join(args.chinese_bert_path, 'vocab.txt')
+    config_path = os.path.join(args.chinese_bert_path, 'config')
     tokenizer = BertMaskDataset(vocab_file, config_path)
 
     model = BertFineTuneMac(chinese_bert, device).to(device)

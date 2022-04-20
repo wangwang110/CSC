@@ -7,7 +7,7 @@ import numpy as np
 from torch.utils.data import DataLoader
 from dataset import construct, BertDataset, li_testconstruct
 from BertFineTune import BertFineTuneMac
-from datasets.bert_dataset_tok import BertMaskDataset
+from bert_dataset_tok import BertMaskDataset
 # from datasets.bert_mask_dataset import BertMaskDataset
 from models.modeling_glycebert import GlyceBertForMaskedLM
 
@@ -100,13 +100,30 @@ class CSCmodel:
         :param src:
         :return:
         """
-        # convert sentence to ids
-        tokenizer_output = self.tokenizer.tokenizer.encode(src)
-        input_ids = tokenizer_output.ids
-        input_mask = tokenizer_output.attention_mask
-        segment_ids = tokenizer_output.type_ids
+        pinyin_tokens = [[0] * 8]  # CLS
+        pinyin_id = self.tokenizer.convert_sentence_to_pinyin_ids(src)
+        pinyin_tokens.extend(pinyin_id)
+        pinyin_tokens.append([0] * 8)  # SEP
 
-        pinyin_tokens = self.tokenizer.convert_sentence_to_pinyin_ids(src, tokenizer_output)
+        tokens_a = [a for a in src]
+        tokens = []
+        segment_ids = []
+        tokens.append("[CLS]")
+        segment_ids.append(0)
+        for token in tokens_a:
+            tokens.append(token)
+            segment_ids.append(0)
+        tokens.append("[SEP]")
+        segment_ids.append(0)
+
+        for j, tok in enumerate(tokens):
+            if tok not in self.w2id:
+                tokens[j] = "[UNK]"
+                pinyin_tokens[j] = [0] * 8
+
+        input_ids = [self.tokenizer.tokenizer.token_to_id(token) for token in tokens]
+        input_mask = [1] * len(input_ids)
+
         while len(input_ids) < max_seq_length:
             input_ids.append(0)
             input_mask.append(0)
@@ -116,6 +133,7 @@ class CSCmodel:
         assert len(input_ids) == max_seq_length
         assert len(input_mask) == max_seq_length
         assert len(segment_ids) == max_seq_length
+
         return input_ids, input_mask, segment_ids, pinyin_tokens
 
 
