@@ -142,7 +142,7 @@ ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 
 - 已经训练好的模型：
 
-
+链接: https://pan.baidu.com/s/1mi0r2Uvv9rd_bfDONNDVYA?pwd=cvak 
 
 - 指标：
 
