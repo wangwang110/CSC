@@ -99,10 +99,13 @@ sighan15结果:
  
 ## 香侬科技ChineseBert用于中文拼写纠错
 
-- 训练：
 ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 
-1. 下载ChineseBert放出的预训练模型
+![image](https://user-images.githubusercontent.com/21475557/164133645-e560f580-4c54-4f38-9bca-153f6bf0fd32.png)
+
+- 训练：
+
+1. 下载ChineseBert放出的预训练模型，放置在本地文件夹（chinese_bert_path 参数）
 
 2. 拷贝ChineseBert代码，置于ChineseBert文件夹，并安装ChineseBert所需依赖
 
@@ -128,9 +131,6 @@ wang2018数据训练
 链接：
 
 sighan13微调
-链接：
-
-sighan15微调
 链接：
 
 
