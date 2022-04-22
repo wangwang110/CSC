@@ -14,7 +14,6 @@ Wang271K: https://github.com/wdimmy/Automatic-Corpus-Generation
 
 sighan13，sighan14，sighan15 包含对应的训练集和测试集，Wang271K仅仅用来训练
 
-如何处理，可参考：https://github.com/DaDaMrX/ReaLiSe
 
 处理过的数据链接: https://pan.baidu.com/s/1Lr_L-lbesYW4fjhELtZ3-w?pwd=4863 
 
