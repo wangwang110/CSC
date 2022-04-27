@@ -39,11 +39,14 @@ sighan13结果:
  ERNIE  |76.6 71.9 74.2 | 73.0 68.5 70.6 | [论文](https://aclanthology.org/2021.findings-acl.198.pdf)
  MLM-phonetics | 82.0 78.3 80.1| 79.5 77.0 78.2 | [论文](https://aclanthology.org/2021.findings-acl.198.pdf)
  Google BERT  |98.7 70.6 82.3|98.6 67.8 80.4| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
+ HeadFilt |100.0 74.9 85.7| 100.0 74.1 85.1 | [论文](https://arxiv.org/pdf/2008.12281.pdf) 
  PHMOSpell |99.5 76.8 86.7| 99.5 75.1 85.6 | [论文](https://aclanthology.org/2021.acl-long.464.pdf)
  BERT-wwm  | 85.0 77.0 80.8| 83.0 75.2 78.9 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
  REALISE (BERT-wwm ) | 88.6 82.5 85.4 | 87.2 81.2 84.1 | [论文](https://aclanthology.org/2021.findings-acl.64.pdf)
  ECOPO BERT-wwm  |87.2 81.7 84.4 | 86.1 80.6 83.3|  [论文](https://arxiv.org/pdf/2203.00991.pdf) 
  ECOPO REALISE (BERT-wwm )|89.3 83.2 86.2 | 88.5 82.0 85.1| [论文](https://arxiv.org/pdf/2203.00991.pdf)
+
+
 
 sighan14结果:
 
@@ -56,6 +59,7 @@ sighan14结果:
  ERNIE  |63.5 69.3 66.3 | 60.1 65.6 62.8| [论文](https://aclanthology.org/2021.findings-acl.198.pdf)
  MLM-phonetics | 66.2 73.8 69.8| 64.2 73.8 68.7 | [论文](https://aclanthology.org/2021.findings-acl.198.pdf)
  Google BERT  |78.6 60.7 68.5|77.8 57.6 66.2| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
+  HeadFilt |82.5 61.6 70.5| 82.1 60.2 69.4 | [论文](https://arxiv.org/pdf/2008.12281.pdf) 
  PHMOSpell |85.3 67.6 75.5| 84.7 64.3 73.1 |[论文](https://aclanthology.org/2021.acl-long.464.pdf)
  Google BERT(4 layer) |82.6 59.0 68.8| 82.4 58.0 68.1| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
  SpellBERT (4 layer) |83.1 62.0 71.0| 82.9 61.2 70.4| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
@@ -81,6 +85,7 @@ sighan15结果:
  Google BERT  |68.4 77.6 72.7 | 66.0 74.9 70.2| [论文](https://aclanthology.org/2021.acl-long.233.pdf)
  PLOME | 77.4 81.5 79.4 | 75.3 79.3 77.2 | [论文](https://aclanthology.org/2021.acl-long.233.pdf)
  Google BERT  |79.9 84.1 72.9 78.1|83.1 68.0 74.8| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
+  HeadFilt |84.5 71.8 77.6| 84.2 70.2 76.5| [论文](https://arxiv.org/pdf/2008.12281.pdf) 
  PHMOSpell |90.1 72.7 80.5| 89.6 69.2 78.1| [论文](https://aclanthology.org/2021.acl-long.464.pdf)
  Google BERT(4 layer) |85.2 68.9 76.2| 84.8 66.9 74.8| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
  SpellBERT (4 layer) |87.5 73.6 80.0| 87.1 71.5 78.5| [论文](https://aclanthology.org/2021.emnlp-main.287v2.pdf)
@@ -89,6 +94,8 @@ sighan15结果:
  ECOPO BERT-wwm |78.2 82.3 80.2| 76.6 80.4 78.4 |  [论文](https://arxiv.org/pdf/2203.00991.pdf) 
  ECOPO REALISE (BERT-wwm) |77.5 82.6 80.0| 76.1 81.2 78.5| [论文](https://arxiv.org/pdf/2203.00991.pdf)
  
+ 
+ HeadFilt论文链接不太确定，题目似乎有变化，结果来自PHMOSpell对应论文
  
  此外，还有一篇通过数据增强的方法来处理csc任务的论文
  
