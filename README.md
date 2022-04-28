@@ -1,5 +1,10 @@
+
+
+
 # ChineseBert_CSC
 ChineseBert用于中文拼写纠错
+
+现在只关注Chinese Spelling Check (CSC)，关于语法语病纠错可查看 https://github.com/destwang/CTCResources#datasets
 
 
 数据来源:
