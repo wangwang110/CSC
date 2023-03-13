@@ -1,13 +1,15 @@
 
 
 
-# ChineseBert_CSC
-ChineseBert用于中文拼写纠错
+# CSC
+中文拼写纠错
 
-现在只关注Chinese Spelling Check (CSC)，关于语法语病纠错可查看 https://github.com/destwang/CTCResources#datasets
+本项目只关注Chinese Spelling Check (CSC)，不考虑多字少字的语法纠错。
+
+关于语法纠错可参考 https://github.com/HillZhang1999/MuCGEC 
 
 
-数据来源:
+常用数据来源:
 
 SIGHAN Bake-off 2013: http://ir.itc.ntnu.edu.tw/lre/sighan7csc.html
 
@@ -15,15 +17,22 @@ SIGHAN Bake-off 2014: http://ir.itc.ntnu.edu.tw/lre/clp14csc.html
 
 SIGHAN Bake-off 2015: http://ir.itc.ntnu.edu.tw/lre/sighan8csc.html
 
-Wang271K: https://github.com/wdimmy/Automatic-Corpus-Generation
+Wang271K: https://github.com/wdimmy/Automatic-Corpus-Generation/tree/master/corpus 
 
-sighan13，sighan14，sighan15 包含对应的训练集和测试集，Wang271K仅仅用来训练
+sighan13，sighan14，sighan15 包含对应的训练集和测试集，Wang271K是论文利用OCR以及语音识别的方法生成的数据构，仅仅用来训练
 
-
-处理过的数据链接: 链接: https://pan.baidu.com/s/1vZNlBsNpcdDr87gtQk6jjg 提取码: 2vb4
 
 
 ## 评价指标
+
+使用句子级纠正F1值。
+
+关于句子级别纠正P值，有两种计算方式
+1. 分母不考虑修改了原句但是与正确句子不同的情况
+2. 分母考虑修改了原句但是与正确句子不同的情况
+
+使用第一种计算方式得到的结果偏高，这里采用第2种
+
 [代码](https://github.com/wangwang110/ChineseBert_CSC/blob/main/ChineseBert/getF1.py)
 
 相比[官方](http://nlp.ee.ncu.edu.tw/resource/csc.html)放出的评价指标，该指标更为严格（所有修正过的句子都算作P值的分母），论文大都使用该评价指标
@@ -108,6 +117,7 @@ sighan15结果:
  
  只不过该论文是在不同的训练集上训练，得到不同数据集对应的模型。例如，在sighan15训练的模型，用于sighan15测试集的测试，所以结果会相对偏高
  
+ 
 ## 香侬科技ChineseBert用于中文拼写纠错
 
 ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
@@ -120,7 +130,7 @@ ChineseBert repo[https://github.com/ShannonAI/ChineseBert]
 
 2. 拷贝ChineseBert代码，置于ChineseBert文件夹，并安装ChineseBert所需依赖
 
-3. 下载训练数据，置于data文件夹，运行train.sh
+3. 运行train.sh
 
 
 - 测试：
