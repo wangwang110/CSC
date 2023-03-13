@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 from torch.optim import Adam
 from torch.utils.data import DataLoader, Dataset
-from getF1 import sent_mertic, token_mertic
+from getF1 import sent_mertic_cor, sent_mertic_det
 from BertFineTune import BertFineTuneMac
 from dataset import construct, BertDataset
 from bert_dataset_tok import BertMaskDataset
@@ -161,8 +161,8 @@ class Trainer:
                 #     print("=======================")
                 all_pres.append(out_sent)
 
-        sent_mertic(all_srcs, all_pres, all_trgs)
-        token_mertic(all_srcs, all_pres, all_trgs)
+        sent_mertic_cor(all_srcs, all_pres, all_trgs)
+        sent_mertic_det(all_srcs, all_pres, all_trgs)
 
     def testSet(self, test):
         self.model.eval()
